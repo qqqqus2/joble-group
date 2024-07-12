@@ -1,0 +1,255 @@
+@use 'sass:math';
+// esg 페이지
+.esg-contents {
+  padding-top: -vw(160);
+  padding-bottom: -vw(200);
+  .subscript {
+    font-size: min(3.6rem, -vw(36));
+    font-weight: 700;
+    line-height: min(5.6rem, -vw(56));
+    text-align: center;
+    font-family: 'Pretendard GOV' !important;
+  }
+  .visual-img {
+    width: 100%;
+    height: -vw(500);
+    margin: 0 auto;
+    margin-top: -vw(60);
+    margin-bottom: -vw(100);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -9999em;
+    &.-env {
+      background-image: url(../images/esg/img-environment.png);
+    }
+    &.-soci {
+      background-image: url(../images/esg/img-social.png);
+    }
+    &.-gov {
+      background-image: url(../images/esg/img-governance.png);
+    }
+  }
+  .target-list {
+    display: flex;
+    width: 100%;
+    max-width: 144rem;
+    margin: 0 auto;
+    .title {
+      flex-shrink: 0;
+      width: -vw(480);
+      padding-left: -vw(81);
+
+      font-size: min(4rem, -vw(40));
+      line-height: min(5.2rem, -vw(52));
+      font-weight: 700;
+    }
+    .num-list {
+      flex-grow: 1;
+      dl {
+        display: flex;
+        align-items: center;
+        gap: -vw(53);
+        + dl {
+          margin-top: -vw(40);
+          padding-top: -vw(40);
+          border-top: 1px solid #ddd;
+        }
+      }
+      dt {
+        flex: 0 0 auto;
+        font-weight: 600;
+        font-size: min(5rem, -vw(50));
+        line-height: min(5.9rem, -vw(59));
+        color: $green-color;
+      }
+      dd {
+        flex: 1 1 auto;
+
+        font-weight: 600;
+        font-size: min(2.8rem, -vw(28));
+        line-height: min(3.8rem, -vw(38));
+      }
+    }
+  }
+  .declare-list {
+    width: 100%;
+    max-width: 144rem;
+    margin: 0 auto;
+    .title {
+      margin-left: -vw(95);
+      font-weight: 700;
+      font-size: min(4rem, -vw(40));
+      line-height: min(5.2rem, -vw(52));
+    }
+    .list {
+      margin-top: -vw(60);
+      margin-left: -vw(100);
+      li {
+        display: flex;
+        gap: -vw(20);
+        font-size: 2.2rem;
+        line-height: 3.6rem;
+        font-weight: 500;
+        color: #000;
+        &::before {
+          content: '하나,';
+          font-weight: 600;
+          font-size: 2.4rem;
+          line-height: 3.6rem;
+        }
+        + li {
+          margin-top: -vw(32);
+          padding-top: -vw(32);
+          border-top: 1px solid #ddd;
+        }
+      }
+    }
+  }
+  .sig-box {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: -vw(78);
+    margin-top: -vw(100);
+    .sig-cell {
+      display: flex;
+      align-items: center;
+      gap: -vw(33);
+      img {
+        width: 100%;
+      }
+      .name {
+        flex-shrink: 0;
+        font-weight: 500;
+        font-size: min(2.4rem, -vw(24));
+        line-height: min(4rem, -vw(40));
+      }
+    }
+  }
+  .footnote {
+    margin-top: -vw(32);
+    padding-top: -vw(60);
+    margin-left: -vw(100);
+    border-top: 1px solid #ddd;
+    font-weight: 700;
+    font-size: min(4rem, -vw(40));
+    line-height: min(5.2rem, -vw(52));
+  }
+}
+/* ==========================================================================
+	Media Queries for Responsive Design. (미디어 쿼리 분기점)
+========================================================================== */
+/* tablet */
+@media only screen and (max-width: 1280px) {
+}
+/* mobile */
+@media only screen and (max-width: 1024px) {
+  .esg-contents {
+    padding: 10rem 0;
+    .subscript {
+      font-size: 2.2rem;
+      line-height: 3.6rem;
+      word-break: break-all;
+    }
+    .visual-img {
+      height: 24.7rem;
+      margin-top: 4rem;
+      margin-bottom: 8.2rem;
+      border-radius: 1.2rem;
+      &.-env {
+        background-image: url(../images/esg/img-mobile-environment.png);
+      }
+      &.-soci {
+        background-image: url(../images/esg/img-mobile-sociial.png);
+      }
+      &.-gov {
+        background-image: url(../images/esg/img-mobile-governance.png);
+      }
+    }
+    .target-list {
+      width: 100%;
+      flex-direction: column;
+      row-gap: 4rem;
+      .title {
+        width: auto;
+        padding-left: 0;
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+      }
+      .num-list {
+        dl {
+          gap: 2rem;
+          + dl {
+            margin-top: 3.2rem;
+            padding-top: 3.2rem;
+          }
+        }
+        dt {
+          font-size: 2.8rem;
+          line-height: 3.3rem;
+        }
+        dd {
+          font-size: 1.8rem;
+          line-height: 2.6rem;
+        }
+      }
+    }
+    .declare-list {
+      width: 100%;
+      .title {
+        margin-left: 0;
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+      }
+      .list {
+        margin-left: 0;
+        margin-top: 4rem;
+        li {
+          flex-direction: column;
+          gap: 0.8rem;
+          font-size: 1.8rem;
+          line-height: 2.6rem;
+          &::before {
+            font-size: 2.2rem;
+            line-height: 3.6rem;
+            font-weight: 700;
+          }
+          + li {
+            margin-top: 3.2rem;
+            padding-top: 3.2rem;
+          }
+        }
+      }
+      .footnote {
+        margin-top: 4rem;
+        margin-left: 0;
+        padding: 0;
+        border: 0;
+        font-size: 2.2rem;
+        line-height: 3.6rem;
+        word-break: break-all;
+      }
+    }
+    .sig-box {
+      flex-direction: column;
+      align-items: flex-end;
+      margin-top: 4rem;
+      gap: 1.6rem;
+      .sig-cell {
+        gap: 2.4rem;
+        .name {
+          font-weight: 700;
+          font-size: 1.8rem;
+          line-height: 2.6rem;
+        }
+        .w-93 {
+          width: 7.2rem !important;
+        }
+        .w-129 {
+          width: 10rem !important;
+        }
+      }
+    }
+  }
+}

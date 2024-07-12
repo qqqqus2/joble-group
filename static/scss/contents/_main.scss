@@ -1,0 +1,635 @@
+/* 메인 */
+.main {
+  #container {
+    padding-top: 18rem;
+    margin-top: 100vh;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+  }
+  #footer {
+    position: relative;
+    z-index: 2;
+  }
+}
+.main-section-tit {
+  font-size: 5.2rem;
+  line-height: 6.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.main-section-txt {
+  font-size: 2rem;
+  line-height: 3.2rem;
+  font-weight: 500;
+  margin-top: 1.6rem;
+  font-family: 'Pretendard GOV' !important;
+}
+.main-banner {
+  width: 100%;
+  height: 100vh;
+  min-height: 70rem;
+  margin-bottom: 18rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  .swiper-slide {
+    position: relative;
+    .video-js {
+      width: 100%;
+      height: 100%;
+      &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+      }
+    }
+    img,
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &.swiper-slide-active {
+      .banner-txt {
+        opacity: 1;
+        bottom: 20rem;
+      }
+    }
+  }
+  // 배너 텍스트
+  .banner-txt {
+    max-width: 144rem;
+    padding: 0 2rem;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $white-color;
+    position: absolute;
+    bottom: 10rem;
+    z-index: 2;
+    opacity: 0;
+    transition: 0.5s 0.2s ease all;
+    .tit {
+      font-size: 5.4rem;
+      line-height: 8rem;
+      margin-bottom: 2.4rem;
+    }
+    .sub-txt {
+      font-size: 2.4rem;
+      font-weight: 500;
+    }
+    .sub-tit {
+      font-size: 3.2rem;
+      font-weight: 700;
+    }
+    .btn-link {
+      font-size: 1.8rem;
+      margin-top: 1.3rem;
+      font-weight: 700;
+      line-height: 2.1rem;
+      padding: 1.2rem 2.1rem;
+      border-radius: 5rem;
+      display: inline-block;
+      border: 0.1rem solid #fff;
+    }
+  }
+  .pagination-wrap {
+    max-width: 144rem;
+    padding: 0 2rem;
+    text-align: left;
+    left: 50%;
+    position: absolute;
+    bottom: 12rem;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    .swiper-pagination {
+      display: inline-block;
+      position: relative;
+      width: auto;
+      top: 0;
+    }
+    .progressbar {
+      display: none;
+      width: 15.6rem;
+      height: 0.2rem;
+      margin: 0 0.6rem;
+      position: relative;
+      top: 0.2rem;
+      background-color: rgba(255, 255, 255, 0.35);
+      .progress {
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0%;
+        height: 100%;
+        transition: width linear;
+      }
+    }
+    .swiper-pagination-bullet {
+      width: auto;
+      height: auto;
+      background: none;
+      color: #fff;
+      border-radius: 0;
+      display: inline-flex;
+      align-items: center;
+      opacity: 0.8;
+      //1 번 슬라이드
+      &:nth-child(1) {
+        .progressbar {
+          .progress {
+            // 영상 길이가 10초
+            transition-duration: 20.5s;
+          }
+        }
+      }
+      //2 번 슬라이드
+      &:nth-child(2) {
+        .progressbar {
+          .progress {
+            // 5초 뒤에 슬라이드 이동
+            transition-duration: 4.5s;
+          }
+        }
+      }
+    }
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+      .progressbar {
+        display: block;
+      }
+    }
+  }
+  .swiper-control {
+    position: relative;
+    width: 2rem;
+    top: 0.1rem;
+    height: 2rem;
+    box-sizing: border-box;
+    margin-left: 0.6rem;
+    background-size: 2rem auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Crect x='5.5' y='4' width='3' height='12' rx='1' fill='white'/%3E%3Crect x='11.5' y='4' width='3' height='12' rx='1' fill='white'/%3E%3C/svg%3E");
+  }
+  &.pause {
+    .swiper-control {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M15.6174 9.14852C16.2515 9.53906 16.2515 10.4609 15.6174 10.8515L7.27438 15.9894C6.60812 16.3997 5.75 15.9204 5.75 15.1379L5.75 4.86205C5.75 4.07959 6.60812 3.60026 7.27438 4.01057L15.6174 9.14852Z' fill='white'/%3E%3C/svg%3E");
+    }
+  }
+  .swiper-navigation {
+    font-size: 0;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    z-index: 20;
+    width: 100%;
+    left: 0;
+    box-sizing: border-box;
+    padding: 0 2rem;
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 9rem;
+      height: 9rem;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.2);
+      background-size: 2rem 1.6rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: 0.3s background ease-in;
+      &:hover {
+        background-color: rgba($color: #000000, $alpha: 1);
+      }
+      &:after {
+        content: none;
+      }
+    }
+    .swiper-button-prev {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='16' viewBox='0 0 20 16' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.70711 0.292893C9.09763 0.683417 9.09763 1.31658 8.70711 1.70711L3.41421 7L19 7C19.5523 7 20 7.44771 20 8C20 8.55228 19.5523 9 19 9H3.41421L8.70711 14.2929C9.09763 14.6834 9.09763 15.3166 8.70711 15.7071C8.31658 16.0976 7.68342 16.0976 7.29289 15.7071L0.292893 8.70711C-0.0976311 8.31658 -0.0976311 7.68342 0.292893 7.29289L7.29289 0.292893C7.68342 -0.0976311 8.31658 -0.0976311 8.70711 0.292893Z' fill='white'/%3E%3C/svg%3E");
+    }
+    .swiper-button-next {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='16' viewBox='0 0 20 16' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.2929 15.7071C10.9024 15.3166 10.9024 14.6834 11.2929 14.2929L16.5858 9L1 9C0.447716 9 6.511e-07 8.55228 6.99382e-07 8C7.47664e-07 7.44771 0.447717 7 1 7L16.5858 7L11.2929 1.70711C10.9024 1.31658 10.9024 0.683417 11.2929 0.292893C11.6834 -0.0976322 12.3166 -0.0976321 12.7071 0.292893L19.7071 7.29289C20.0976 7.68342 20.0976 8.31658 19.7071 8.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071Z' fill='white'/%3E%3C/svg%3E");
+    }
+  }
+}
+.main-references {
+  margin-top: 9.4rem;
+  margin-bottom: 18rem;
+  .swiper {
+    overflow: visible;
+  }
+  .swiper-wrapper {
+    margin-left: -2rem;
+  }
+  .swiper-slide {
+    width: 44rem;
+    padding: 0 2rem;
+    .tit {
+      display: block;
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+      font-weight: 700;
+
+      margin-bottom: 2rem;
+    }
+    .img-wrap {
+      overflow: hidden;
+      border-radius: 1.2rem;
+      display: block;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+// 메인 고객 리스트
+.client-list {
+  // background-repeat: repeat-x;
+  // background-size: 135rem 9rem;
+  // background-image: url('../../static/images/main/img-main-clientList.png');
+  // background-position: center;
+  // animation: bg-scrolling-reverse 10s linear infinite;
+  margin-bottom: 18rem;
+  font-size: 0;
+  .swiper-wrapper {
+    height: 9rem;
+  }
+  .swiper-slide {
+    width: auto;
+    img {
+      height: 100%;
+    }
+  }
+}
+// @keyframes bg-scrolling-reverse {
+//   from {
+//     background-position: 0 0;
+//   }
+//   to {
+//     background-position: -135rem 0;
+//   }
+// }
+// 메인 company value
+.companyValue-tit {
+  text-align: center;
+  br {
+    display: none;
+  }
+}
+.companyValue-tit + .main-section-txt {
+  text-align: center;
+  br {
+    display: block;
+  }
+}
+.company-values {
+  ul {
+    margin-top: 8rem;
+    display: flex;
+    li {
+      text-align: center;
+      flex: 1 1 auto;
+      box-sizing: border-box;
+      padding: 0 1rem;
+      &::before {
+        content: '';
+        display: block;
+        margin: auto;
+        max-width: 36rem;
+        width: 100%;
+        height: 26rem;
+        border-radius: 1.2rem;
+        margin-bottom: 3.2rem;
+        background-size: auto 26rem;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      &.value-1 {
+        &::before {
+          background-image: url('../../static/images/main/img-company-value1.png');
+        }
+      }
+      &.value-2 {
+        &::before {
+          background-image: url('../../static/images/main/img-company-value2.png');
+        }
+      }
+      &.value-3 {
+        &::before {
+          background-image: url('../../static/images/main/img-company-value3.png');
+        }
+      }
+      .value-tit {
+        font-size: 2.4rem;
+        font-weight: bold;
+        line-height: 2.8rem;
+      }
+      .value-txt {
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+        font-weight: 400;
+        margin-top: 1.6rem;
+      }
+    }
+  }
+}
+//메인 하단 컨텐츠
+.main-bottomContents {
+  width: 100%;
+  height: 126rem;
+  margin-top: 20rem;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  transition: 0.3s ease-in background;
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #222;
+    opacity: 0.3;
+  }
+  &.type-1 {
+    background-image: url('../../static/images/main/img-mainContents-solustion-service01.png');
+  }
+  &.type-2 {
+    background-image: url('../../static/images/main/img-mainContents-solustion-service02.png');
+  }
+  &.type-3 {
+    background-image: url('../../static/images/main/img-mainContents-solustion-service03.png');
+  }
+  .bottom-tit {
+    position: absolute;
+    top: 28rem;
+    color: #fff;
+    z-index: 10;
+    .main-section-tit {
+      margin-bottom: 1.6rem;
+    }
+    .main-section-txt {
+      opacity: 0.8;
+    }
+  }
+  .bottomContents-btns {
+    position: absolute;
+    top: 19rem;
+    width: 68rem;
+    right: 0;
+    .swiper-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      padding-right: 34rem;
+      box-sizing: border-box;
+    }
+    .swiper-slide {
+      width: 34rem;
+      padding: 2rem;
+      flex: 0 0 auto;
+      height: auto;
+      &:nth-child(2) {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+      a {
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 2rem;
+        box-sizing: border-box;
+        padding: 4rem 3.2rem;
+        height: 40rem;
+        color: #fff;
+        position: relative;
+        background: rgba(255, 255, 255, 0.2);
+        border: 0.1rem solid rgba(255, 255, 255, 0.3);
+        align-items: flex-end;
+        .idx {
+          position: absolute;
+          left: 3.2rem;
+          top: 4rem;
+          font-weight: normal;
+          font-size: 2rem;
+        }
+        .tit {
+          font-size: 2.4rem;
+          line-height: 3.2rem;
+          font-weight: bold;
+          margin-bottom: 1.2rem;
+        }
+        .txt {
+          font-size: 1.6rem;
+          line-height: 2.1rem;
+          font-weight: 400;
+          opacity: 0.7;
+          font-family: 'Pretendard GOV' !important;
+        }
+      }
+      &.active {
+        a {
+          background: #fff;
+          border-color: #fff;
+          .idx {
+            color: #222;
+            font-weight: bold;
+            font-size: 3.2rem;
+          }
+          .tit {
+            color: #222;
+          }
+          .txt {
+            color: #555;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+/* ==========================================================================
+	Media Queries for Responsive Design. (미디어 쿼리 분기점)
+========================================================================== */
+/* tablet */
+@media only screen and (max-width: 1280px) {
+  .main-banner {
+    .swiper-navigation {
+      .swiper-button-prev,
+      .swiper-button-next {
+        width: 6rem;
+        height: 6rem;
+      }
+    }
+  }
+}
+
+/* mobile */
+@media only screen and (max-width: 1024px) {
+  .main {
+    #container {
+      padding-top: 12rem;
+    }
+  }
+  .main-banner {
+    margin-bottom: 12rem;
+    .banner-txt {
+      .tit {
+        font-size: 2.4rem;
+        line-height: 3.5rem;
+      }
+      .sub-txt,
+      .sub-tit {
+        font-size: 1.6rem;
+        font-weight: 600;
+      }
+    }
+    .swiper-navigation {
+      display: none;
+    }
+    .pagination-wrap {
+      bottom: 6rem;
+      .progressbar {
+        width: 10rem;
+      }
+    }
+  }
+  .main-section-tit {
+    font-size: 2.8rem;
+    line-height: 3.3rem;
+  }
+  .main-section-txt {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    margin-top: 0.4rem;
+  }
+  .main-references {
+    margin-top: 4rem;
+    margin-bottom: 12rem;
+    .swiper-wrapper {
+      margin-left: 0;
+    }
+    .swiper-slide {
+      width: 28rem;
+      padding: 0 0.6rem;
+      .tit {
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+      }
+    }
+  }
+  .companyValue-tit {
+    text-align: left;
+    br {
+      display: block;
+    }
+  }
+  .companyValue-tit + .main-section-txt {
+    text-align: left;
+    br {
+      display: none;
+    }
+  }
+  .company-values {
+    ul {
+      flex-wrap: wrap;
+      li {
+        width: 100%;
+        line-height: 2.4rem;
+        & + li {
+          margin-top: 6rem;
+        }
+      }
+    }
+  }
+  .client-list {
+    margin-bottom: 12rem;
+    .swiper-wrapper {
+      height: 6rem;
+    }
+  }
+  .main-bottomContents {
+    margin-top: 10rem;
+    height: 86.5rem;
+    overflow: hidden;
+    .bottom-tit {
+      position: relative;
+      top: auto;
+      padding-top: 12rem;
+    }
+    .bottomContents-btns {
+      position: relative;
+      top: auto;
+      margin-left: -0.8rem;
+      margin-top: 6rem;
+      width: auto;
+      .swiper {
+        overflow: visible;
+      }
+      .swiper-wrapper {
+        flex-wrap: nowrap;
+        padding-right: 0;
+      }
+      .swiper-slide {
+        flex: none;
+        box-sizing: border-box;
+        padding: 0 0.8rem;
+        &:nth-child(2) {
+          position: relative;
+          top: auto;
+          right: auto;
+          transform: none;
+        }
+        // &.active {
+        //   a {
+        //     color: #fff;
+        //     background: rgba(255, 255, 255, 0.2);
+        //     border: 0.1rem solid rgba(255, 255, 255, 0.3);
+        //     .idx,
+        //     .tit,
+        //     .txt {
+        //       color: #fff;
+        //     }
+        //     .idx {
+        //       font-weight: normal;
+        //       font-size: 2rem;
+        //     }
+        //     .txt {
+        //       opacity: 0.7;
+        //     }
+        //   }
+        // }
+        // &.swiper-slide-active {
+        //   a {
+        //     background: #fff;
+        //     border-color: #fff;
+        //     .idx {
+        //       color: #222;
+        //       font-weight: bold;
+        //       font-size: 3.2rem;
+        //     }
+        //     .tit {
+        //       color: #222;
+        //     }
+        //     .txt {
+        //       color: #555;
+        //       opacity: 1;
+        //     }
+        //   }
+        // }
+      }
+    }
+  }
+}
