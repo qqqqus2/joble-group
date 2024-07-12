@@ -1,7 +1,7 @@
 {
-  "name": "POSMECCA",
-  "short_name": "POSMECCA",
-  "description": "POSMECCA",
+  "name": "조블페이",
+  "short_name": "조블페이",
+  "description": "조블페이",
   "display": "standalone",
   "orientation": "portrait",
   "scope": "/",
@@ -17,7 +17,6 @@
       "src": "/static/img/favicon/icon-310x310.png",
       "sizes": "256x256",
       "type": "image/png"
-    },
-    
+    }
   ]
 }

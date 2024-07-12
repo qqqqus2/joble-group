@@ -2,7 +2,7 @@ function includeFooter() {
   let str = `
 <footer id="footer" class="footer">
   <div class="inner">
-    <div class="logo" role="img" aria-label="POSMECCA"></div>
+    <div class="logo" role="img" aria-label="조블페이"></div>
     <div>
       <ul class="policy-list">
         <li><a href="../html/service_solution.html" aria-label="Service">Service</a></li>
@@ -21,7 +21,7 @@ function includeFooter() {
         </p>     
       </div>
       <div class="copyright">
-          <small class="txt_copyright">Copyright 2024 (주)피오에스메카</small>
+          <small class="txt_copyright">Copyright 2024 (주)조블페이</small>
         </div>
     </div>
   </div>
