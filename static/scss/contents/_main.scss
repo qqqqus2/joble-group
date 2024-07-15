@@ -143,21 +143,17 @@
       display: inline-flex;
       align-items: center;
       opacity: 0.8;
+      .progressbar {
+        .progress {
+          transition-duration: 4.5s;
+        }
+      }
       //1 번 슬라이드
       &:nth-child(1) {
         .progressbar {
           .progress {
             // 영상 길이가 10초
             transition-duration: 20.5s;
-          }
-        }
-      }
-      //2 번 슬라이드
-      &:nth-child(2) {
-        .progressbar {
-          .progress {
-            // 5초 뒤에 슬라이드 이동
-            transition-duration: 4.5s;
           }
         }
       }
