@@ -8,11 +8,11 @@ function includeHeader() {
         <span class="gnb-current">모바일 메뉴 펼치기</span>
       </button>
       <ul>
-        <li><a href="../html/service_solution.html" aria-label="Service">Service</a></li>
-        <li><a href="../html/reference.html" aria-label="Reference">Reference</a></li>
-        <li><a href="../html/esg_environment.html" aria-label="ESG">ESG</a></li>
-        <li><a href="../html/cs_center_info.html" aria-label="CS Center">CS Center</a></li>
-        <li><a href="../html/aboutus_greeting.html" aria-label="About us">About us</a></li>
+        <li><a href="../html/service_solution.html" aria-label="JOBLEPAY">JOBLEPAY</a></li>
+        <li><a href="../html/reference.html" aria-label="JOBLEPIN">JOBLEPIN</a></li>
+        <li><a href="../html/esg_environment.html" aria-label="ENTERTAINMENT">ENTERTAINMENT</a></li>
+        <li><a href="../html/cs_center_info.html" aria-label="SERVICE">SERVICE</a></li>
+        <li><a href="../html/aboutus_greeting.html" aria-label="개인정보처리방침">개인정보처리방침</a></li>
       </ul>
     </nav>
   </div>

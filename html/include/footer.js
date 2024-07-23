@@ -5,23 +5,22 @@ function includeFooter() {
     <div class="logo" role="img" aria-label="조블페이"></div>
     <div>
       <ul class="policy-list">
-        <li><a href="../html/service_solution.html" aria-label="Service">Service</a></li>
-        <li><a href="../html/reference.html" aria-label="Reference">Reference</a></li>
-        <li><a href="../html/esg_environment.html" aria-label="ESG">ESG</a></li>
-        <li><a href="../html/cs_center_info.html" aria-label="CS Center">CS Center</a></li>
+        <li><a href="../html/service_solution.html" aria-label="JOBLEPAY">JOBLEPAY</a></li>
+        <li><a href="../html/reference.html" aria-label="JOBLEPIN">JOBLEPIN</a></li>
+        <li><a href="../html/esg_environment.html" aria-label="ENTERTAINMENT">ENTERTAINMENT</a></li>
         <li class="m-line"></li>
-        <li><a href="../html/aboutus_greeting.html" aria-label="About us">About us</a></li>
-        <li><button type="button" class="popPrivacyOpen">개인정보취급방침</button></li>
+        <li><a href="../html/cs_center_info.html" aria-label="SERVICE">SERVICE</a></li>
+        <li><a href="../html/aboutus_greeting.html" aria-label="개인정보처리방침">개인정보처리방침</a></li>
       </ul>
       <div class="footer-address">
-        <p>08584 서울특별시 금천구 두산로 70 A동 1807호/1808호 <span>(독산동 291-1 현대지식산업센터)</span></p>
+        <p>15352 경기도 안산시 단원구 고잔로 57-9 (고잔동) 아이즈빌II오피스텔</p>
+        <p>06098 서울특별시 강남구 논현동 248-2 (논현동) 6층</p>
         <p>
-          <span>TEL 02-2668-6460</span> 
-          <span>FAX 02-6008-6467</span>
+          <span>TEL 1544-3890</span> 
         </p>     
       </div>
       <div class="copyright">
-          <small class="txt_copyright">Copyright 2024 (주)조블페이</small>
+          <small class="txt_copyright">Copyright 2024 (주)조블컴퍼니</small>
         </div>
     </div>
   </div>
