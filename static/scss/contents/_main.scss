@@ -3,7 +3,8 @@
   #container {
     padding-top: 18rem;
     margin-top: 100vh;
-    background-color: #fff;
+    color: #fff;
+    background-color: #222;
     position: relative;
     z-index: 2;
   }
@@ -33,6 +34,7 @@
   position: fixed;
   left: 0;
   top: 0;
+  background-color: #222;
   .swiper-slide {
     position: relative;
     .video-js {
@@ -53,6 +55,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      opacity: 0.7;
     }
     &.swiper-slide-active {
       .banner-txt {
@@ -125,7 +128,7 @@
       top: 0.2rem;
       background-color: rgba(255, 255, 255, 0.35);
       .progress {
-        background-color: #fff;
+        background-color: #e5003b;
         position: absolute;
         left: 0;
         top: 0;
@@ -160,6 +163,7 @@
     }
     .swiper-pagination-bullet-active {
       opacity: 1;
+      color: #e5003b;
       .progressbar {
         display: block;
       }
