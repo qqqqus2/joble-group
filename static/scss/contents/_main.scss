@@ -34,7 +34,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  background-color: #222;
+  background-color: #000;
   .swiper-slide {
     position: relative;
     .video-js {
@@ -55,7 +55,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.7;
+      opacity: 0.5;
     }
     &.swiper-slide-active {
       .banner-txt {
@@ -81,14 +81,13 @@
       font-size: 5.4rem;
       line-height: 8rem;
       margin-bottom: 2.4rem;
+      strong {
+        color: #e5003b;
+      }
     }
     .sub-txt {
       font-size: 2.4rem;
       font-weight: 500;
-    }
-    .sub-tit {
-      font-size: 3.2rem;
-      font-weight: 700;
     }
     .btn-link {
       font-size: 1.8rem;
@@ -320,12 +319,12 @@
       }
       &.value-2 {
         &::before {
-          background-image: url('../../static/images/main/img-company-value2.png');
+          background-image: url('../../static/images/main/img-company-value2.jpg');
         }
       }
       &.value-3 {
         &::before {
-          background-image: url('../../static/images/main/img-company-value3.png');
+          background-image: url('../../static/images/main/img-company-value3.jpg');
         }
       }
       .value-tit {
