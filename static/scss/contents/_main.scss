@@ -349,7 +349,6 @@
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
-  transition: 0.3s ease-in background;
   position: relative;
   &::before {
     content: '';
@@ -359,17 +358,17 @@
     top: 0;
     right: 0;
     bottom: 0;
-    background: #222;
-    opacity: 0.3;
+    background: #000;
+    opacity: 0.8;
   }
   &.type-1 {
-    background-image: url('../../static/images/main/img-mainContents-solustion-service01.png');
+    background-image: url('../../static/images/main/img-mainContents-solustion-service01.jpg');
   }
   &.type-2 {
-    background-image: url('../../static/images/main/img-mainContents-solustion-service02.png');
+    background-image: url('../../static/images/main/img-mainContents-solustion-service02.jpg');
   }
   &.type-3 {
-    background-image: url('../../static/images/main/img-mainContents-solustion-service03.png');
+    background-image: url('../../static/images/main/img-mainContents-solustion-service03.jpg');
   }
   .bottom-tit {
     position: absolute;
@@ -443,7 +442,7 @@
           background: #fff;
           border-color: #fff;
           .idx {
-            color: #222;
+            color: $coral-color;
             font-weight: bold;
             font-size: 3.2rem;
           }
