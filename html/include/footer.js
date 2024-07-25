@@ -2,7 +2,7 @@ function includeFooter() {
   let str = `
 <footer id="footer" class="footer">
   <div class="inner">
-    <div class="logo" role="img" aria-label="조블페이"></div>
+    <div class="logo" role="img" aria-label="JOBLE COMPANY">JOBLE COMPANY</div>
     <div>
       <ul class="policy-list">
         <li><a href="../html/service_solution.html" aria-label="JOBLEPAY">JOBLEPAY</a></li>
@@ -10,7 +10,6 @@ function includeFooter() {
         <li><a href="../html/esg_environment.html" aria-label="ENTERTAINMENT">ENTERTAINMENT</a></li>
         <li class="m-line"></li>
         <li><a href="../html/cs_center_info.html" aria-label="SERVICE">SERVICE</a></li>
-        <li><a href="../html/aboutus_greeting.html" aria-label="개인정보처리방침">개인정보처리방침</a></li>
       </ul>
       <div class="footer-address">
         <p>15352 경기도 안산시 단원구 고잔로 57-9 (고잔동) 아이즈빌II오피스텔</p>
