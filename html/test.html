@@ -106,17 +106,17 @@
 
     <script src="./static/js/ui-common.js"></script>
     <script>
-      if ('virtualKeyboard' in navigator) {
-        navigator.virtualKeyboard.overlaysContent = true;
-        navigator.virtualKeyboard.addEventListener('geometrychange', (event) => {
-          const { x, y, width, height } = event.target.boundingRect;
-          if (height > 0) {
-            alert(1);
-          } else {
-            alert(2);
-          }
-        });
-      }
+      let initialHeight = window.innerHeight;
+
+      window.addEventListener('resize', () => {
+        if (window.innerHeight < initialHeight) {
+          alert('가상 키보드가 올라왔습니다.');
+          // 가상 키보드가 올라왔을 때 실행할 코드
+        } else {
+          alert('가상 키보드가 내려갔습니다.');
+          // 가상 키보드가 내려갔을 때 실행할 코드
+        }
+      });
     </script>
   </body>
 </html>
