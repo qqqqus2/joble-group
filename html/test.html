@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>조블페이</title>
+    <meta name="description" content="조블페이 - 최상의 서비스를 추구할 것이며 고객중심으로 생각하는 회사가 되겠습니다. " />
+    <link rel="canonical" href="" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="조블페이" />
+    <meta property="og:description" content="조블페이" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="조블페이" />
+    <meta property="og:image" content="./static/img/ogp_image.png" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="./static/images/favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="./static/images/favicon/favicon.ico" />
+
+    <meta name="apple-mobile-web-app-title" content="조블페이" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-icon" href="./static/images/favicon/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="./static/images/favicon/touch-icon-ipad.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./static/images/favicon/touch-icon-iphone-retina.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="./static/images/favicon/touch-icon-ipad-retina.png" />
+    <link rel="manifest" href="./static/css/manifest.json" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./static/css/front.min.css" />
+    <link rel="stylesheet" href="./static/css/default.min.css" />
+    <link rel="stylesheet" href="./static/css/custom.min.css" />
+    <style>
+      #header {
+        background-color: #72727248;
+      }
+      #container {
+        margin: 5rem 0;
+      }
+      .html-list {
+        border-bottom: 0.1rem solid #72727248;
+      }
+      .html-list a {
+        color: #186ce9;
+        text-decoration: underline;
+      }
+      .html-list .depth-1 {
+        border-top: 2px #72727248 solid;
+      }
+      .current-worked {
+        color: red;
+      }
+      .current-worked.completed {
+        color: green;
+      }
+      /* 모바일 */
+      .html-list thead {
+        background-color: #ccc;
+      }
+      .html-list thead th,
+      .html-list tbody th,
+      .html-list tbody td {
+        padding: 1rem;
+        font-size: 1.2rem;
+        text-align: center;
+      }
+      .html-list .etc {
+        display: none;
+      }
+      .html-list th:last-child,
+      .html-list td:last-child {
+        font-size: 0;
+      }
+      .html-list td.current-worked::before {
+        content: '△';
+        font-size: 1rem;
+      }
+      .html-list .current-worked.completed::before {
+        content: '○';
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- js -->
+    <script src="./static/js/lib/jquery-3.7.1.min.js"></script>
+    <script src="./static/js/lib/jquery-migrate-3.4.0.min.js"></script>
+    <script src="./static/js/lib/swiper-bundle.11.0.5.min.js"></script>
+
+    <div id="wrapper" class="pt-120">
+      <!-- header -->
+      <script class="__include" src="./html/include/header.js"></script>
+      <!-- contents -->
+      <div id="container">
+        <div class="inner">
+          <input type="button" placeholder="" class="test" />
+        </div>
+      </div>
+
+      <!-- footer -->
+      <script class="__include" src="./html/include/footer.js"></script>
+      <!-- footer end -->
+    </div>
+
+    <!-- js -->
+
+    <script src="./static/js/ui-common.js"></script>
+    <script>
+      window.addEventListener('resize', function () {
+        if (document.activeElement.tagName == 'INPUT' || document.activeElement.tagName == 'TEXTAREA') {
+          // 키보드가 올라왔을 가능성이 높습니다
+          alert('키보드 올라옴');
+        }
+      });
+    </script>
+  </body>
+</html>
