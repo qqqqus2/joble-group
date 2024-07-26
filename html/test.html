@@ -93,7 +93,7 @@
       <!-- contents -->
       <div id="container">
         <div class="inner">
-          <input type="button" placeholder="" class="test" style="width: 300px" />
+          <input type="text" placeholder="" class="test" style="width: 300px" />
         </div>
       </div>
 
@@ -109,6 +109,10 @@
       window.addEventListener('resize', function () {
         if (document.activeElement.tagName == 'INPUT' || document.activeElement.tagName == 'TEXTAREA') {
           // 키보드가 올라왔을 가능성이 높습니다
+        }
+      });
+      window.visualViewport.addEventListener('resize', function () {
+        if (window.visualViewport.height < window.innerHeight) {
           alert('키보드 올라옴');
         }
       });
