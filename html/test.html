@@ -106,19 +106,17 @@
 
     <script src="./static/js/ui-common.js"></script>
     <script>
-      document.addEventListener('focusin', function (e) {
-        if (e.target.tagName == 'INPUT' || e.target.tagName == 'TEXTAREA') {
-          // 입력 필드에 포커스가 있으며, 키보드가 올라왔을 가능성이 높습니다
-          alert('키보드 올라옴');
-        }
-      });
-
-      document.addEventListener('focusout', function (e) {
-        if (e.target.tagName == 'INPUT' || e.target.tagName == 'TEXTAREA') {
-          // 입력 필드에서 포커스가 빠졌으며, 키보드가 내려갔을 가능성이 높습니다
-          alert('키보드 내려감');
-        }
-      });
+      if ('virtualKeyboard' in navigator) {
+        navigator.virtualKeyboard.overlaysContent = true;
+        navigator.virtualKeyboard.addEventListener('geometrychange', (event) => {
+          const { x, y, width, height } = event.target.boundingRect;
+          if (height > 0) {
+            alert(1);
+          } else {
+            alert(2);
+          }
+        });
+      }
     </script>
   </body>
 </html>
