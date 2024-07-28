@@ -287,13 +287,13 @@
 // }
 // 메인 company value
 .companyValue-tit {
-  text-align: center;
+  // text-align: center;
   br {
     display: none;
   }
 }
 .companyValue-tit + .main-section-txt {
-  text-align: center;
+  text-align: left;
   br {
     display: block;
   }
