@@ -251,19 +251,19 @@ function commonUI() {
   });
 
   //개인정보 팝업
-  const privacyOpen = document.querySelector('.popPrivacyOpen');
-  const privacyClose = document.querySelectorAll('.popPrivacyClose');
-  const popPrivacy = document.querySelector('#popPrivacy');
+  // const privacyOpen = document.querySelector('.popPrivacyOpen');
+  // const privacyClose = document.querySelectorAll('.popPrivacyClose');
+  // const popPrivacy = document.querySelector('#popPrivacy');
 
-  privacyOpen.addEventListener('click', function () {
-    popPrivacy.classList.add('opened');
-  });
+  // privacyOpen.addEventListener('click', function () {
+  //   popPrivacy.classList.add('opened');
+  // });
 
-  privacyClose.forEach(function (element) {
-    element.addEventListener('click', function () {
-      popPrivacy.classList.remove('opened');
-    });
-  });
+  // privacyClose.forEach(function (element) {
+  //   element.addEventListener('click', function () {
+  //     popPrivacy.classList.remove('opened');
+  //   });
+  // });
 }
 
 /* main ui */
@@ -386,8 +386,9 @@ function mainUI() {
   $mainReferences = new Swiper('.main-references .swiper', {
     slidesPerView: 'auto',
     freeMode: true,
+    loop: true,
     autoplay: {
-      delay: 1500,
+      delay: 2500,
       disableOnInteraction: false
     },
     preventInteractionOnTransition: false
