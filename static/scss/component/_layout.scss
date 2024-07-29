@@ -147,8 +147,7 @@
   letter-spacing: -0.02em;
   overflow-x: hidden;
   .top-banner {
-    height: 52rem;
-    padding-top: 12rem;
+    height: 45rem;
     box-sizing: border-box;
     position: relative;
     text-align: center;
@@ -160,12 +159,12 @@
       position: relative;
       top: 50%;
       z-index: 10;
-      transform: translateY(-50%);
+      transform: translateY(-30%);
       h3 {
         font-size: 6rem;
         line-height: 7.2rem;
         font-weight: bold;
-        color: $green-color;
+        color: $coral-color;
         margin-bottom: 2.4rem;
       }
       p {

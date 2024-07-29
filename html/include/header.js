@@ -11,7 +11,7 @@ function includeHeader() {
         <li><a href="../html/service_solution.html" aria-label="JOBLEPAY">JOBLEPAY</a></li>
         <li><a href="../html/reference.html" aria-label="JOBLEPIN">JOBLEPIN</a></li>
         <li><a href="../html/esg_environment.html" aria-label="ENTERTAINMENT">ENTERTAINMENT</a></li>
-        <li><a href="../html/cs_center_info.html" aria-label="SERVICE">SERVICE</a></li>
+        <li><a href="../html/service_address.html" aria-label="SERVICE">SERVICE</a></li>
       </ul>
     </nav>
   </div>
