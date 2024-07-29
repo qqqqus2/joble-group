@@ -163,15 +163,7 @@
       line-height: min(5.6rem, -vw(56));
       text-align: center;
     }
-    .company-map {
-      //카카오맵 설정시 스타일 수정
-      width: 100%;
-      max-width: 144rem;
-      height: min(68rem, -vw(680));
-      margin: 0 auto;
-      background-color: #ddd;
-      border-radius: -vw(12);
-    }
+
     .traffic-box {
       display: none;
       align-items: stretch;
