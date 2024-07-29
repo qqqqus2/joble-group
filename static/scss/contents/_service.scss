@@ -429,7 +429,15 @@
     }
   }
 }
-
+.company-map {
+  //카카오맵 설정시 스타일 수정
+  width: 100%;
+  max-width: 144rem;
+  height: min(68rem, -vw(680));
+  margin: 0 auto;
+  background-color: #ddd;
+  border-radius: -vw(12);
+}
 /* ==========================================================================
 	Media Queries for Responsive Design. (미디어 쿼리 분기점)
 ========================================================================== */
