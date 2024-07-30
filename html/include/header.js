@@ -10,7 +10,7 @@ function includeHeader() {
       <ul>
         <li><a href="../html/service_solution.html" aria-label="JOBLEPAY">JOBLEPAY</a></li>
         <li><a href="../html/reference.html" aria-label="JOBLEPIN">JOBLEPIN</a></li>
-        <li><a href="../html/jobleEnter-intro.html" aria-label="ENTERTAINMENT">ENTERTAINMENT</a></li>
+        <li><a href="../html/jobleEnter_intro.html" aria-label="ENTERTAINMENT">ENTERTAINMENT</a></li>
         <li><a href="../html/service_address.html" aria-label="SERVICE">SERVICE</a></li>
       </ul>
     </nav>
