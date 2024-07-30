@@ -113,8 +113,7 @@
     font-size: 0;
     > li {
       display: inline-block;
-      width: 25%;
-      display: inline-block;
+      width: 33.333%;
       padding: 0 2rem;
       vertical-align: top;
     }
@@ -189,8 +188,8 @@
     }
   }
   .arrow-progress {
-    margin-top: 17.6rem;
-    margin-bottom: 26rem;
+    margin-top: 10.6rem;
+    margin-bottom: 16rem;
     .title {
       font-size: min(4.8rem, -vw(48));
       line-height: min(6rem, -vw(60));
@@ -256,8 +255,8 @@
             display: block;
             width: 1.6rem;
             height: 1.6rem;
-            border: 1px solid #389e2f;
-            background-color: $green-color;
+            border: 1px solid $coral-color;
+            background-color: $coral-color;
             border-radius: 50%;
             box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
           }
