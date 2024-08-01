@@ -31,6 +31,15 @@
       border-color: #595d63;
     }
   }
+  &.btn-coral {
+    background-color: #e5003b;
+    border-color: #e5003b;
+    color: #fff;
+    &:hover {
+      background-color: #e5003b;
+      border-color: #e5003b;
+    }
+  }
   &.small {
     min-width: 11.8rem;
     height: 5.8rem;
