@@ -12,6 +12,12 @@
     position: relative;
     z-index: 2;
   }
+  .inner + .inner {
+    margin-top: 9rem;
+    @include media-min-width(1025) {
+      margin-top: 18rem;
+    }
+  }
 }
 .main-section-tit {
   font-size: 5.2rem;
@@ -225,7 +231,6 @@
 }
 .main-references {
   margin-top: 9.4rem;
-  margin-bottom: 18rem;
   .swiper {
     overflow: visible;
   }
@@ -237,8 +242,8 @@
     padding: 0 2rem;
     .tit {
       display: block;
-      font-size: 2.4rem;
-      line-height: 3.2rem;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
       font-weight: 700;
       margin-bottom: 2rem;
       text-align: center;
@@ -249,6 +254,7 @@
       border-radius: 1.2rem;
       height: 20rem;
       display: block;
+      border: 0.1rem solid rgba(255, 255, 255, 0.2);
       img {
         width: 100%;
         height: 100%;
@@ -316,12 +322,16 @@
         border: 0.1rem solid #ccc;
         max-width: 36rem;
         width: 100%;
-        height: 26rem;
+        height: 20rem;
         border-radius: 1.2rem;
-        margin-bottom: 3.2rem;
+        margin-bottom: 1.6rem;
         background-size: auto 26rem;
         background-position: center;
         background-repeat: no-repeat;
+        @include media-min-width(1025) {
+          height: 26rem;
+          margin-bottom: 3.2rem;
+        }
       }
       &.value-1 {
         &::before {
@@ -344,9 +354,13 @@
         line-height: 2.8rem;
       }
       .value-txt {
-        font-size: 2.4rem;
-        line-height: 3.6rem;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
         font-weight: 400;
+        @include media-min-width(1025) {
+          font-size: 2.4rem;
+          line-height: 3.6rem;
+        }
       }
     }
   }
@@ -470,6 +484,59 @@
     }
   }
 }
+
+.card-step-list {
+  width: 100%;
+  max-width: 144rem;
+  margin: 0 auto;
+  margin-bottom: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  overflow: hidden;
+  margin-top: 4rem;
+  @include media-min-width(1025) {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 8rem;
+    margin-bottom: 19.5rem;
+  }
+  .card {
+    // flex: 1 1 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 4.2rem 8rem;
+    border: 0.1rem solid #fafafa;
+    border-radius: 1.2rem;
+    text-align: center;
+    .card-header {
+      margin-bottom: 2rem;
+      color: $coral-color;
+      font-weight: 700;
+      font-size: 2.4rem;
+      line-height: 1;
+      span {
+        display: block;
+        margin-bottom: 1.2rem;
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+        text-transform: uppercase;
+        color: $green-color;
+      }
+    }
+    .card-body {
+      font-weight: 500;
+      font-size: 1.8rem;
+      line-height: 2.6rem;
+      color: #fafafa;
+    }
+  }
+}
 /* ==========================================================================
 	Media Queries for Responsive Design. (미디어 쿼리 분기점)
 ========================================================================== */
@@ -521,13 +588,12 @@
     line-height: 3.3rem;
   }
   .main-section-txt {
-    font-size: 1.8rem;
-    line-height: 2.6rem;
-    margin-top: 0.8rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin-top: 1.2rem;
   }
   .main-references {
     margin-top: 4rem;
-    margin-bottom: 12rem;
     .swiper-wrapper {
       margin-left: 0;
     }
@@ -559,7 +625,7 @@
         width: 100%;
         line-height: 2.4rem;
         & + li {
-          margin-top: 6rem;
+          margin-top: 4rem;
         }
       }
     }
@@ -578,6 +644,11 @@
       position: relative;
       top: auto;
       padding-top: 12rem;
+    }
+    .main-section-txt {
+      br {
+        display: none;
+      }
     }
     .bottomContents-btns {
       position: relative;

@@ -82,49 +82,7 @@
     color: $green-color;
   }
 }
-.card-step-list {
-  width: 100%;
-  max-width: 144rem;
-  margin: 0 auto;
-  margin-bottom: 19.5rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
-  overflow: hidden;
-  .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 5rem 4.2rem 5rem;
-    background-color: #fafafb;
-    border-radius: 1.2rem;
-    text-align: center;
-    .card-header {
-      margin-bottom: 3rem;
-      color: $coral-color;
-      font-weight: 700;
-      font-size: 3.2rem;
-      line-height: 1;
-      span {
-        display: block;
-        margin-bottom: 1.2rem;
-        font-weight: 400;
-        font-size: 1.8rem;
-        line-height: 2.1rem;
-        text-transform: uppercase;
-        color: $green-color;
-      }
-    }
-    .card-body {
-      height: 8.6rem;
-      font-weight: 500;
-      font-size: 2rem;
-      line-height: 2.6rem;
-      color: #555;
-    }
-  }
-}
+
 .txt-card {
   width: 100%;
   max-width: 144rem;
