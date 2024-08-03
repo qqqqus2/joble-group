@@ -167,7 +167,7 @@ body {
   display: flex;
   &:not(.not-full):not(.justify-start):not(.justify-center):not(.justify-end):not(.space-between):not(.space-around):not(.space-evenly):not(.flex-11):not(.flex-10):not(.flex-01):not(.flex-00):not(.flex-wrap):not(.flex-column) {
     > * {
-      width: 100%;
+      // width: 100%;
     }
   }
 }

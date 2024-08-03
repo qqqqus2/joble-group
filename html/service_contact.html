@@ -66,6 +66,53 @@
                   </div>
                   <div class="form-body">
                     <div class="row">
+                      <div class="label req"><span>유형</span></div>
+                      <div class="form flex" style="gap: 2rem">
+                        <label class="radio flex-00">
+                          <input type="radio" name="typeContact" />
+                          <i class="lbl"></i>
+                          광고
+                        </label>
+                        <label class="radio flex-00">
+                          <input type="radio" name="typeContact" />
+                          <i class="lbl"></i>
+                          협업
+                        </label>
+                        <label class="radio flex-00">
+                          <input type="radio" name="typeContact" />
+                          <i class="lbl"></i>
+                          기타
+                        </label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="label req"><span>이름</span></div>
+                      <div class="form">
+                        <div class="inputbox">
+                          <input type="text" placeholder="이름을 입력하세요" maxlength="20" />
+                          <button type="button" class="btn-x">글자초기화</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="label req"><span>연락처</span></div>
+                      <div class="form">
+                        <div class="inputbox">
+                          <input type="text" placeholder="ex) 000-000-000" maxlength="20" />
+                          <button type="button" class="btn-x">글자초기화</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="label req"><span>이메일</span></div>
+                      <div class="form">
+                        <div class="inputbox counting-num">
+                          <input type="text" placeholder="example@example.com" maxlength="50" />
+                          <button type="button" class="btn-x">글자초기화</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
                       <div class="label req"><span>제목</span></div>
                       <div class="form">
                         <div class="inputbox counting-num">
@@ -95,23 +142,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="form-box">
-                  <div class="form-tit">
-                    <h6>문의 답변</h6>
-                    <div class="fc-red">* 필수항목</div>
-                  </div>
-                  <div class="form-body">
-                    <div class="row">
-                      <div class="label req"><span>답변 받을 이메일</span></div>
-                      <div class="form">
-                        <div class="inputbox">
-                          <input type="text" placeholder="입력하세요" name="부서입력" />
-                          <button type="button" class="btn-x">글자초기화</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
                 <!-- 개인 정보 수집 및 이용 내용 추가 -->
                 <div class="form-box">
                   <div class="form-tit">
@@ -138,7 +169,7 @@
                           </thead>
                           <tbody>
                             <tr>
-                              <td>이메일</td>
+                              <td>이름, 연락처, 이메일</td>
                               <td>서비스 문의 해결을 위한 해결 안내</td>
                               <td>개인정보 수집 및 이용목적 달성 까지</td>
                             </tr>
