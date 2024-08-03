@@ -156,15 +156,18 @@
         border-top: 1px solid #ddd;
         display: flex;
         border-bottom: 2px #222 solid;
+        .flex {
+          position: relative;
+        }
         a {
           display: block;
-          flex: 1 1 auto;
+          flex: 0 0 auto;
           white-space: nowrap;
           overflow: hidden;
-          width: 100%;
+          word-break: break-all;
           color: $blue-color;
           text-overflow: ellipsis;
-          padding-right: 0.5rem;
+          padding-right: 2.5rem;
         }
         .ml-auto {
           flex: 0 0 auto;
