@@ -394,7 +394,7 @@ function mainUI() {
     preventInteractionOnTransition: false
   });
 
-  $clientList = new Swiper('.client-list .swiper', {
+  $clientList = new Swiper('.giftCard-list .swiper', {
     slidesPerView: 'auto',
     loop: true,
     spaceBetween: 10,

@@ -13,7 +13,7 @@
     .swiper-slide {
       display: flex;
       flex: 1 1 auto;
-      height: 11.2rem;
+      height: 8rem;
       align-items: center;
       position: relative;
       justify-content: center;
@@ -22,7 +22,7 @@
         position: relative;
         text-align: center;
         font-size: 2.4rem;
-        line-height: 11.2rem;
+        line-height: 8rem;
         width: 100%;
         height: 100%;
       }
@@ -214,8 +214,8 @@
       padding: 0;
       .swiper-wrapper {
         .swiper-slide {
-          width: 33.333%;
-          padding: 0;
+          width: auto;
+          padding: 0 2rem;
           &.active {
             &::after {
               width: 100%;

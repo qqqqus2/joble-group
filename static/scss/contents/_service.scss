@@ -116,7 +116,7 @@
     vertical-align: top;
   }
   .card {
-    height: 43.4rem;
+    height: 35rem;
     padding: 6rem 3.2rem;
     border: 1px solid #ddd;
     border-radius: 1.2rem;
@@ -125,13 +125,13 @@
     box-shadow: 0 0.6rem 2rem rgba(0, 0, 0, 0.04);
     i {
       display: block;
-      width: 8rem;
+      width: auto;
       height: 8rem;
       margin: 0 auto;
       margin-bottom: 3.2rem;
       background-repeat: no-repeat;
-      background-size: cover;
-      background-position: 0 0;
+      background-size: contain;
+      background-position: center;
       &.ico-food {
         background-image: url(../images/service/ico-green-meal.svg);
       }
@@ -145,7 +145,13 @@
         background-image: url(../images/service/ico-green-etc.svg);
       }
       &.ico-customer {
-        background-image: url(../images/service/ico-green-customer.svg);
+        background-image: url(../images/service/ico-customer.svg);
+      }
+      &.ico-sending {
+        background-image: url(../images/service/ico-sending.svg);
+      }
+      &.ico-card {
+        background-image: url(../images/service/ico-card.svg);
       }
       &.ico-cart {
         background-image: url(../images/service/ico-green-cart.svg);
@@ -282,6 +288,12 @@
         text-align: center;
         box-shadow: 0 0.6rem 2rem rgba(0, 0, 0, 0.04);
       }
+    }
+  }
+  & + .tit-box {
+    padding-top: 0rem;
+    @include media-min-width(1025) {
+      padding-top: 10rem;
     }
   }
 }
@@ -426,6 +438,35 @@
   }
 }
 
+.greeting-box {
+  width: 102rem;
+  display: flex;
+  margin: 20rem auto;
+
+  .txt-content {
+    flex: 1;
+    .title {
+      margin-bottom: 6rem;
+      font-weight: 700;
+      font-size: 3.6rem;
+      line-height: 5.6rem;
+    }
+    .subtit {
+      font-weight: 600;
+      font-size: 2.8rem;
+      line-height: 3.8rem;
+    }
+    p {
+      font-weight: 500;
+      font-size: 2.2rem;
+      line-height: 3.6rem;
+      + .subtit {
+        margin-top: 7rem;
+      }
+    }
+  }
+}
+
 .company-map {
   //카카오맵 설정시 스타일 수정
   width: 100%;
@@ -437,11 +478,11 @@
 }
 .creator-title {
   font-weight: 700;
-  font-size: 3.6rem;
-  line-height: 5.6rem;
+  font-size: 3.2rem;
+  line-height: 5.2rem;
   text-align: center;
   padding-top: 10rem;
-  padding-bottom: 5rem;
+  padding-bottom: 10rem;
 }
 .certific-box {
   width: 100%;
@@ -488,120 +529,32 @@
   }
 }
 
+.movie-box {
+  max-width: 80rem;
+  margin: 0 auto 10rem;
+  iframe {
+    width: 100%;
+    height: 40rem;
+    @include media-max-width(480) {
+      height: 35rem;
+    }
+  }
+}
+
 /* 찾아오시는 길 페이지*/
 .address-box {
-  .location-tab {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: -vw(49);
-    margin-bottom: -vw(60);
-    .list {
-      position: relative;
-      + .list::before {
-        content: '';
-        position: absolute;
-        top: -vw(4);
-        left: -vw(-24);
-        display: block;
-        width: -vw(1);
-        height: -vw(24);
-        background-color: #ddd;
-      }
-      &.active {
-        a {
-          color: $green-color;
-        }
-      }
-    }
-    a {
-      font-weight: 600;
-      font-size: min(2.4rem, -vw(24));
-      line-height: min(3.2rem, -vw(32));
-    }
-  }
+  padding-top: 3rem;
   .address {
-    margin-bottom: -vw(40);
-
+    margin-bottom: 2rem;
     font-weight: 700;
-    font-size: min(3.6rem, -vw(36));
-    line-height: min(5.6rem, -vw(56));
-    text-align: center;
-  }
+    font-size: 1.8rem;
+    line-height: 3.6rem;
+    @include media-min-width(1025) {
+      font-size: 2.4rem;
+      line-height: 5.6rem;
+    }
 
-  .traffic-box {
-    display: none;
-    align-items: stretch;
-    gap: -vw(120);
-    width: 100%;
-    max-width: 144rem;
-    margin: 0 auto;
-    margin-top: -vw(20);
-    padding: -vw(54) -vw(60);
-    border: 1px solid #ddd;
-    border-radius: -vw(12);
-    .tit {
-      margin-bottom: -vw(20);
-      font-weight: 700;
-      font-size: min(2.2rem, -vw(22));
-      line-height: min(3.8rem, -vw(38));
-    }
-    .txt {
-      font-weight: 500;
-      font-size: min(1.8rem, -vw(18));
-      line-height: min(2.6rem, -vw(26));
-      color: #555;
-      p + p {
-        margin-top: -vw(12);
-      }
-    }
-    .subway {
-      flex-shrink: 0;
-    }
-    .fc-blue {
-      color: #3a68cf;
-    }
-    .fc-gray {
-      color: #878d97;
-    }
-    .fc-red {
-      color: #e83323;
-    }
-    .fc-navy {
-      color: #4c5a71;
-    }
-    .bus {
-      position: relative;
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -vw(-60);
-        display: block;
-        width: -vw(2);
-        height: -vw(140);
-        border-left: 1px dashed #ddd;
-      }
-      dl {
-        display: flex;
-        gap: -vw(8);
-        + .flex {
-          gap: -vw(8);
-          margin-top: -vw(12);
-        }
-      }
-      dt {
-        font-weight: 700;
-      }
-      dl + dl {
-        margin-left: -vw(24);
-      }
-    }
-  }
-  &.seoul {
-    .traffic-box {
-      display: flex;
-    }
+    text-align: left;
   }
 }
 /* ==========================================================================
@@ -615,9 +568,8 @@
     }
     .card {
       padding: 5rem 2rem;
-      height: 40rem;
+      height: 32rem;
       i {
-        width: 6rem;
         height: 6rem;
       }
       ul {
@@ -647,7 +599,6 @@
   }
 
   .tit-box {
-    margin: 0;
     margin-bottom: 3.2rem;
     font-size: 2.4rem;
     line-height: 3.2rem;
@@ -705,25 +656,25 @@
     .card {
       width: 100%;
       max-width: 35.3rem;
-      padding: 6rem 3.2rem;
+      padding: 3rem 3.2rem;
       border-radius: 1.2rem;
-      height: 42rem;
+      height: auto;
       margin: 0 auto;
       i {
-        width: 8rem;
-        height: 8rem;
+        width: auto;
+        height: 4rem;
         margin-bottom: 3.2rem;
       }
       strong {
-        font-size: 2.4rem;
+        font-size: 1.8rem;
         line-height: 3.2rem;
       }
       ul {
-        margin-top: 3.8rem;
+        margin-top: 1.6rem;
         line-height: 2.6rem;
         li {
           padding-left: 1.3rem;
-          font-size: 1.8rem;
+          font-size: 1.6rem;
           + li {
             margin-top: 0.8rem;
           }
@@ -765,23 +716,27 @@
         &:nth-child(n)::before {
           height: 1px;
           width: 6.5rem;
-          margin-top: 3.2rem;
+          margin-top: 5.6rem;
         }
         &:nth-child(n)::after {
           left: 0;
-          top: 2.6rem;
+          top: 4.9rem;
           width: 1.2rem;
           height: 1.2rem;
         }
         p {
-          top: 0;
+          top: 4rem;
           left: 5rem;
           transform: translateX(0);
-          width: auto;
+          width: 12rem;
           height: 6.6rem;
-          padding: 0 2.4rem;
+          padding: 0 1.4rem;
           font-size: 1.8rem;
-          line-height: 6.6rem;
+          text-align: center;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+          line-height: 2.6rem;
         }
         &:nth-child(2n) {
           &::before {
@@ -794,33 +749,7 @@
       }
     }
   }
-  .triangle-progress {
-    width: 100%;
-    height: 34.1rem;
-    max-width: 35.3rem;
-    margin: 8rem auto;
-    background-size: 30.7rem 30.8rem;
-    .progress {
-      bottom: 1.7rem;
-    }
-    .circle {
-      width: 16rem;
-      height: 16rem;
-      border-radius: 50%;
-      strong {
-        font-size: 1.6rem;
-        line-height: 2.4rem;
-      }
-      p {
-        margin-top: 0.8rem;
-        font-size: 1.4rem;
-        line-height: 1.8rem;
-      }
-      &.top {
-        top: -16rem;
-      }
-    }
-  }
+
   .card-step-box {
     width: 100%;
     max-width: 35.3rem;
@@ -881,11 +810,60 @@
     line-height: 3.2rem;
   }
 
+  .greeting-box {
+    width: 100%;
+    gap: 8rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    flex-direction: column-reverse;
+    .object-img {
+      width: 100%;
+      height: 48.8rem;
+      img {
+        width: 31.2rem;
+        height: 42rem;
+        border-radius: 1.2rem;
+      }
+      &::before {
+        width: 19rem;
+        height: 4.6rem;
+        top: 18rem;
+        left: 5.4rem;
+      }
+      &::after {
+        width: 24.4rem;
+        height: 24.4rem;
+        border-radius: 1.2rem;
+      }
+    }
+    .txt-content {
+      .title {
+        margin-bottom: 4rem;
+        font-size: 2.2rem;
+        line-height: 3.6rem;
+      }
+      .subtit {
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+      }
+      p {
+        margin-top: 1.6rem;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        + .subtit {
+          margin-top: 3.2rem;
+        }
+      }
+    }
+  }
+
   // 크리에이터
   .creator-title {
     font-size: 1.8rem;
-    padding-top: 2rem;
-    padding-bottom: 1rem;
+    line-height: 3.2rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
   .certific-box {
     width: 100%;
