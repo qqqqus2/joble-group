@@ -132,8 +132,14 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
-      &.ico-food {
-        background-image: url(../images/service/ico-green-meal.svg);
+      &.ico-afreeca {
+        background-image: url(../images/main/img_card_3.png);
+      }
+      &.ico-game {
+        background-image: url(../images/service/ico-game.png);
+      }
+      &.ico-24h {
+        background-image: url(../images/service/ico-24h.png);
       }
       &.ico-fashion {
         background-image: url(../images/service/ico-green-fashion.svg);
@@ -152,15 +158,6 @@
       }
       &.ico-card {
         background-image: url(../images/service/ico-card.svg);
-      }
-      &.ico-cart {
-        background-image: url(../images/service/ico-green-cart.svg);
-      }
-      &.ico-marketing {
-        background-image: url(../images/service/ico-green-marketing.svg);
-      }
-      &.ico-total {
-        background-image: url(../images/service/ico-green-total.svg);
       }
     }
     strong {
