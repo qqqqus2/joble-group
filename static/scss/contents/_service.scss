@@ -554,6 +554,35 @@
     text-align: left;
   }
 }
+
+.notice-table {
+  margin: 5rem auto 0;
+  max-width: 120rem;
+  overflow-x: auto;
+  .table {
+    min-width: 50rem;
+    td {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  @include media-min-width(1025) {
+    margin: 10rem auto 0;
+    th:nth-child(3),
+    th:nth-child(4) {
+      width: 15rem;
+    }
+  }
+  th:first-child {
+    width: 5rem;
+  }
+  th:nth-child(3) {
+    width: 12rem;
+  }
+  th:nth-child(4) {
+    width: 10rem;
+  }
+}
 /* ==========================================================================
 	Media Queries for Responsive Design. (미디어 쿼리 분기점)
 ========================================================================== */
