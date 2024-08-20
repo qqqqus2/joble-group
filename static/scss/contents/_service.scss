@@ -159,6 +159,15 @@
       &.ico-card {
         background-image: url(../images/service/ico-card.svg);
       }
+      &.ico-purchase-ticket {
+        background-image: url(../images/service/ico-purchase-ticket.png);
+      }
+      &.ico-24H-ticket {
+        background-image: url(../images/service/ico-24H-ticket.png);
+      }
+      &.ico-send-ticket {
+        background-image: url(../images/service/ico-send-ticket.png);
+      }
     }
     strong {
       font-weight: 600;
