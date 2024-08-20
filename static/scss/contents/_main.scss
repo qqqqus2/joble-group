@@ -231,6 +231,7 @@
 }
 .main-references {
   margin-top: 9.4rem;
+  overflow: hidden;
   .swiper {
     overflow: visible;
   }
@@ -317,7 +318,8 @@
     display: block;
   }
 }
-.company-values {
+.company-values,
+.ticket-values {
   ul {
     margin-top: 8rem;
     display: flex;
@@ -375,7 +377,44 @@
       }
     }
   }
+  &.ticket-values {
+    margin-bottom: 9rem;
+    @include media-min-width(1025) {
+      margin-bottom: 18rem;
+    }
+    ul {
+      li {
+        &::before {
+          border-radius: 50%;
+          width: 25rem;
+          height: 25rem;
+          background-size: auto 90%;
+          background-color: $white-color;
+          @include media-min-width(1025) {
+            width: 30rem;
+            height: 30rem;
+          }
+        }
+        &.value-1 {
+          &::before {
+            background-image: url('../../static/images/main/img-ticket-value2.jpg');
+          }
+        }
+        &.value-2 {
+          &::before {
+            background-image: url('../../static/images/main/img-ticket-value1.jpg');
+          }
+        }
+        &.value-3 {
+          &::before {
+            background-image: url('../../static/images/main/img-ticket-value3.jpg');
+          }
+        }
+      }
+    }
+  }
 }
+
 //메인 하단 컨텐츠
 .main-bottomContents {
   width: 100%;
@@ -629,7 +668,8 @@
       display: none;
     }
   }
-  .company-values {
+  .company-values,
+  .ticket-values {
     ul {
       flex-wrap: wrap;
       li {

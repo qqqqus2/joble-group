@@ -62,9 +62,12 @@
   color: #999;
   &.small {
     font-size: 1.4rem;
-    padding: 1rem;
+    padding: 0.4rem 1rem;
     height: auto;
     border-radius: 2.4rem;
+    color: $white-color;
+    background-color: $coral-color;
+    border-color: transparent;
   }
 }
 
