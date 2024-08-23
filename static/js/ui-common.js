@@ -233,23 +233,6 @@ function commonUI() {
     element.classList.add('ani-ready');
   });
 
-  window.addEventListener('scroll', function () {
-    const elements = document.querySelectorAll('[data-animation]');
-
-    elements.forEach(function (element) {
-      let position = element.getBoundingClientRect();
-      let screenMiddle = window.innerHeight;
-      let animationClass = element.getAttribute('data-animation');
-
-      if (position.top + position.height / 2 < screenMiddle) {
-        element.classList.remove('ani-ready');
-        element.classList.add('animate__animated');
-
-        element.classList.add(animationClass);
-      }
-    });
-  });
-
   //개인정보 팝업
   // const privacyOpen = document.querySelector('.popPrivacyOpen');
   // const privacyClose = document.querySelectorAll('.popPrivacyClose');
@@ -265,6 +248,28 @@ function commonUI() {
   //   });
   // });
 }
+// 페이지 로드 시 스크롤 애니메이션 실행
+function checkElementsPosition() {
+  const elements = document.querySelectorAll('[data-animation]');
+
+  elements.forEach(function (element) {
+    let position = element.getBoundingClientRect();
+    let screenMiddle = window.innerHeight;
+    let animationClass = element.getAttribute('data-animation');
+
+    console.log(position.top + position.height / 2, screenMiddle);
+
+    if (position.top + position.height / 2 < screenMiddle) {
+      element.classList.remove('ani-ready');
+      element.classList.add('animate__animated');
+      element.classList.add(animationClass);
+    }
+  });
+}
+document.addEventListener('DOMContentLoaded', checkElementsPosition);
+
+// 스크롤 시 실행
+window.addEventListener('scroll', checkElementsPosition);
 
 /* main ui */
 let $mainBanner;
