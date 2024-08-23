@@ -127,11 +127,14 @@
   position: relative;
 }
 /* common layout */
-.bg-service {
-  background-image: url('../../static/images/common/bg-service.png');
+.bg-joblePay {
+  background-image: url('../../static/images/common/bg-joblePay.jpg');
 }
 .bg-joblePin {
   background-image: url('../../static/images/common/bg-joblePin.jpg');
+}
+.bg-jobleTicket {
+  background-image: url('../../static/images/common/bg-jobleTicket.jpg');
 }
 .bg-entertainment {
   background-image: url('../../static/images/common/bg-entertainment.jpg');
@@ -145,7 +148,7 @@
 #container {
   box-sizing: border-box;
   letter-spacing: -0.02em;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   .top-banner {
     height: 45rem;
     box-sizing: border-box;

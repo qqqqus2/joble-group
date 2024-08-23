@@ -285,6 +285,9 @@ body {
   .h-#{$i*5 + 100} {
     height: $i * 0.5rem + 10rem !important;
   }
+  .gap-#{$i} {
+    gap: $i * 0.1rem !important;
+  }
 }
 @for $i from 0 through 100 {
   @if $i !=33 and $i !=66 {

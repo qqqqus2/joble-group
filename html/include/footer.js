@@ -11,7 +11,6 @@ function includeFooter() {
         <li><a href="../html/service_address.html" aria-label="SERVICE">SERVICE</a></li>
       </ul>
       <div class="footer-address">
-        <p>15352 경기도 안산시 단원구 고잔로 57-9 (고잔동) 아이즈빌II오피스텔</p>
         <p>06098 서울특별시 강남구 논현동 248-2 (논현동) 6층</p>
         <p>
           <span>TEL 1544-3890</span> 

@@ -10,6 +10,7 @@
   line-height: 2.6rem;
   font-weight: 700;
   text-align: center;
+  display: inline-block;
   &:hover {
     background-color: #fafafb;
   }
@@ -59,6 +60,15 @@
   line-height: 2.6rem;
   text-align: center;
   color: #999;
+  &.small {
+    font-size: 1.4rem;
+    padding: 0.4rem 1rem;
+    height: auto;
+    border-radius: 2.4rem;
+    color: $white-color;
+    background-color: $coral-color;
+    border-color: transparent;
+  }
 }
 
 // 하단 가운데정렬 버튼박스
