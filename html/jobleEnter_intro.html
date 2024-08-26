@@ -63,14 +63,14 @@
           <div class="sub-contents">
             <div class="greeting-box">
               <div class="txt-content">
-                <div class="title">
+                <div class="title tac" data-animation="animate__fadeInUp">
                   조블엔터테인먼트와 함께 <br />
                   <span class="fc-pink">아프리카 TV</span>에서 활동 하실 <span class="fc-pink">크리에이터분</span>을 모집합니다.
                 </div>
               </div>
               <ul class="intro-item">
-                <li>
-                  <i class="img-wrap"></i>
+                <li data-animation="animate__fadeInUp">
+                  <i class="img-wrap"><img src="../static/images/service/img-enter1.jpg" alt="" /></i>
                   <div class="txt-cont">
                     <strong>개인 매니저 지원</strong>
                     <p>
@@ -80,8 +80,8 @@
                     </p>
                   </div>
                 </li>
-                <li>
-                  <i class="img-wrap"></i>
+                <li class="ani-delay-1" data-animation="animate__fadeInUp">
+                  <i class="img-wrap"><img src="../static/images/service/img-enter2.jpg" alt="" /></i>
                   <div class="txt-cont">
                     <strong>장비/편의사항 지원</strong>
                     <p>
@@ -91,8 +91,8 @@
                     </p>
                   </div>
                 </li>
-                <li>
-                  <i class="img-wrap"></i>
+                <li class="ani-delay-2" data-animation="animate__fadeInUp">
+                  <i class="img-wrap"><img src="../static/images/service/img-enter3.jpg" alt="" /></i>
                   <div class="txt-cont">
                     <strong>법무/세무 매니저 지원</strong>
                     <p>
@@ -104,29 +104,30 @@
                 </li>
               </ul>
               <div class="txt-content">
-                <div class="title">
+                <div class="title tac" data-animation="animate__fadeInUp">
                   아프리카TV 관련하여 조블엔터테인먼트는<br />
                   <span class="fc-pink">준비되어 있습니다!</span>
                 </div>
               </div>
 
-              <ol>
-                <li>Best BJ/ Partner BJ 승격에 최대한 지원해드립니다.</li>
-                <li>전 아프리카TV 임원 출신 이사님과 꾸준한 분석을 진행하고 있습니다.</li>
-                <li>방송 정지/경고 등의 문제 발생 시 최대한 빠른 해결책을 준비하고 있습니다.</li>
+              <ol class="intro-info">
+                <li data-animation="animate__fadeInUp"><strong>1.</strong> Best BJ/ Partner BJ 승격에 최대한 지원해드립니다.</li>
+                <li data-animation="animate__fadeInUp"><strong>2.</strong> 전 아프리카TV 임원 출신 이사님과 꾸준한 분석을 진행하고 있습니다.</li>
+                <li data-animation="animate__fadeInUp"><strong>3.</strong> 방송 정지/경고 등의 문제 발생 시 최대한 빠른 해결책을 준비하고 있습니다.</li>
               </ol>
               <div class="bg-dark">
+                <canvas id="confetti"></canvas>
                 <div class="title">약속드립니다.</div>
                 <ul class="intro-item">
                   <li>
-                    <i class="img-wrap"></i>
+                    <i class="img-wrap"><img src="../static/images/service/ic-calendar.png" alt="" /></i>
                     <div class="txt-cont">
                       <strong>쾌적한 정산</strong>
                       <p>개인 사업자로 등록하여 좀 절세 정산과 지연 없는 정산을 약속드립니다.</p>
                     </div>
                   </li>
                   <li>
-                    <i class="img-wrap"></i>
+                    <i class="img-wrap"><img src="../static/images/service/ic-report.png" alt="" /></i>
                     <div class="txt-cont">
                       <strong>정산비율 우대</strong>
                       <p>단기간에 급격하게 성장한 경우 정산 시 비율을 조정하여 더욱 방송에 재미를 붙일 수 있게 지원하겠습니다.</p>
@@ -138,7 +139,6 @@
           </div>
         </div>
       </div>
-      <!-- 상세 팝업 -->
 
       <!-- footer -->
       <script class="__include" src="./include/footer.js"></script>
@@ -150,6 +150,103 @@
     <script src="../static/js/lib/jquery-migrate-3.4.0.min.js"></script>
     <script src="../static/js/lib/swiper-bundle.11.0.5.min.js"></script>
     <script src="../static/js/ui-common.js"></script>
-    <script></script>
+    <script>
+      // 하단 파티클
+      const NUM_CONFETTI = 100;
+      const COLORS = [
+        [85, 71, 106],
+        [174, 61, 99],
+        [219, 56, 83],
+        [244, 92, 68],
+        [248, 182, 70]
+      ];
+      const PI_2 = 2 * Math.PI;
+
+      const canvas = document.getElementById('confetti');
+      const context = canvas.getContext('2d');
+      window.w = 0;
+      window.h = 0;
+
+      const resizeWindow = () => {
+        window.w = canvas.width = window.innerWidth;
+        window.h = canvas.height = window.innerHeight;
+      };
+
+      window.addEventListener('resize', resizeWindow, false);
+
+      window.onload = () => setTimeout(resizeWindow, 0);
+
+      const range = (a, b) => (b - a) * Math.random() + a;
+
+      const drawCircle = (x, y, r, style) => {
+        context.beginPath();
+        context.arc(x, y, r, 0, PI_2, false);
+        context.fillStyle = style;
+        context.fill();
+      };
+
+      let xpos = 0.5;
+
+      document.onmousemove = (e) => {
+        xpos = e.pageX / w;
+      };
+
+      window.requestAnimationFrame = (() => {
+        return (
+          window.requestAnimationFrame ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame ||
+          window.oRequestAnimationFrame ||
+          window.msRequestAnimationFrame ||
+          function (callback) {
+            window.setTimeout(callback, 1000 / 60);
+          }
+        );
+      })();
+
+      class Confetti {
+        constructor() {
+          this.style = COLORS[~~range(0, 5)];
+          this.rgb = `rgba(${this.style[0]},${this.style[1]},${this.style[2]}`;
+          this.r = ~~range(2, 6);
+          this.r2 = 2 * this.r;
+          this.replace();
+        }
+
+        replace() {
+          this.opacity = 0;
+          this.dop = 0.03 * range(1, 4);
+          this.x = range(-this.r2, w - this.r2);
+          this.y = range(-20, h - this.r2);
+          this.xmax = w - this.r;
+          this.ymax = h - this.r;
+          this.vx = range(0, 2) + 8 * xpos - 5;
+          this.vy = 0.7 * this.r + range(-1, 1);
+        }
+
+        draw() {
+          this.x += this.vx;
+          this.y += this.vy;
+          this.opacity += this.dop;
+          if (this.opacity > 1) {
+            this.opacity = 1;
+            this.dop *= -1;
+          }
+          if (this.opacity < 0 || this.y > this.ymax) this.replace();
+          if (!(0 < this.x && this.x < this.xmax)) this.x = (this.x + this.xmax) % this.xmax;
+          drawCircle(~~this.x, ~~this.y, this.r, `${this.rgb},${this.opacity})`);
+        }
+      }
+
+      const confetti = Array.from({ length: NUM_CONFETTI }, () => new Confetti());
+
+      window.step = () => {
+        requestAnimationFrame(step);
+        context.clearRect(0, 0, w, h);
+        confetti.forEach((c) => c.draw());
+      };
+
+      step();
+    </script>
   </body>
 </html>
